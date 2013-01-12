@@ -4,4 +4,6 @@ assignments-1102
 Intro client side
 
 
-Ann OKeeffe
+Name:   Ann OKeeffe
+Class:  DIG 1102
+term:   Spring 2013
