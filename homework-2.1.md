@@ -38,7 +38,7 @@ When you're done editing this file, save it, commit it, and push it to your "ass
 
 //  amo-2012 homework below:
 
-`http://c9.io/amo-2012/jquery/scr/events.js:6-8`
+`http://c9.io/amo-2012/jquery/src/events.js:6-8`
 ```javascript
     function returnTrue() {
     return true;
@@ -46,4 +46,46 @@ When you're done editing this file, save it, commit it, and push it to your "ass
     //  here is a function called 'returnTrue'
 ```
 
+`http://c9.io/amo-2012/jquery/src/events.js:6-8`
+```javascript
+    function returnFalse() {
+    return false;
+    }
+    // another function, this one returns 'false'
+```
 
+
+
+`http://c9.io/amo-2012/jquery/src/events.js:24`
+```javascript   
+    var handleObjIn, eventHandle, tmp,
+    // here are 3 variables named as (above)
+```
+
+
+
+`http://c9.io/amo-2012/jquery/src/support.js:6'
+```javascript
+   div.innerHTML = "<a>a</a><input type='checkbox'/>";
+   // this looks to be incorporating html  within the coding which precedes it on lines 3 and 4:
+   
+   
+     //  var support, a, select, opt, input, fragment,
+	//	div = document.createElement("div");
+```
+
+
+
+`http://c9.io/amo-2012/jquery/build/release.js:6'
+```javascript
+    function initialize( next ) {
+        // here is  function named initialize
+```
+    
+    
+'http://c9.io/amo-2012/jquery/build/release.js:67-68'
+```javascript
+      var newver, oldver,
+		rversion = /^(\d)\.(\d+)\.(\d)((?:a|b|rc)\d|pre)?$/,
+        // 3  varirables   newver   oldver   rversion
+```
