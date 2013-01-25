@@ -89,3 +89,17 @@ When you're done editing this file, save it, commit it, and push it to your "ass
 		rversion = /^(\d)\.(\d+)\.(\d)((?:a|b|rc)\d|pre)?$/,
         // 3  varirables   newver   oldver   rversion
 ```
+
+
+'http://c9.io/amo-2012/jquery/build/release.js:102'
+```javascript
+    function checkGitStatus( next ) {
+        // a function that gets status from Github
+```
+
+
+'http://c9.io/amo-2012/jquery/build/release.js:103'
+```javascript
+    git( [ "status" ], function( error, stdout, stderr ) {
+        // dk what this is but it looks like  'git' is a function in jquery - maybe??
+```
