@@ -103,3 +103,11 @@ When you're done editing this file, save it, commit it, and push it to your "ass
     git( [ "status" ], function( error, stdout, stderr ) {
         // dk what this is but it looks like  'git' is a function in jquery - maybe??
 ```
+
+
+
+'http://c9.io/amo-2012/jquery/ajax.js:74'
+```javascript
+    while ( (dataType = dataTypes[i++]) 
+    // increasing the value of i  by its same value
+```
