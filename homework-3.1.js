@@ -52,7 +52,8 @@ jQuery.extend({
 		promise.pipe = promise.then;
 
 		// Add list-specific methods
-		jQuery.each( tuples, function( i, tuple ) {
+		jQuery.each( tuples, function( i, tuple ) 
+        {
 			var list = tuple[ 2 ],
 				stateString = tuple[ 3 ];
 
@@ -60,17 +61,21 @@ jQuery.extend({
 			promise[ tuple[1] ] = list.add;
 
 			// Handle state
-			if ( stateString ) {
-				list.add(function() {
+			if ( stateString ) 
+            {
+				list.add(function() 
+                {
 					// state = [ resolved | rejected ]
 					state = stateString;
 
 				// [ reject_list | resolve_list ].disable; progress_list.lock
-				}, tuples[ i ^ 1 ][ 2 ].disable, tuples[ 2 ][ 2 ].lock );
+				}, 
+                tuples[ i ^ 1 ][ 2 ].disable, tuples[ 2 ][ 2 ].lock );
 			}
 
 			// deferred[ resolve | reject | notify ]
-			deferred[ tuple[0] ] = function() {
+			deferred[ tuple[0] ] = function()
+            {
 				deferred[ tuple[0] + "With" ]( this === deferred ? promise : this, arguments );
 				return this;
 			};
@@ -81,7 +86,8 @@ jQuery.extend({
 		promise.promise( deferred );
 
 		// Call given func if any
-		if ( func ) {
+		if ( func )
+        {
 			func.call( deferred, deferred );
 		}
 
@@ -90,7 +96,8 @@ jQuery.extend({
 	},
 
 	// Deferred helper
-	when: function( subordinate /* , ..., subordinateN */ ) {
+	when: function( subordinate /* , ..., subordinateN */ ) 
+    {
 		var i = 0,
 			resolveValues = core_slice.call( arguments ),
 			length = resolveValues.length,
@@ -117,12 +124,15 @@ jQuery.extend({
 			progressValues, progressContexts, resolveContexts;
 
 		// add listeners to Deferred subordinates; treat others as resolved
-		if ( length > 1 ) {
+		if ( length > 1 ) 
+        {
 			progressValues = new Array( length );
 			progressContexts = new Array( length );
 			resolveContexts = new Array( length );
-			for ( ; i < length; i++ ) {
-				if ( resolveValues[ i ] && jQuery.isFunction( resolveValues[ i ].promise ) ) {
+			for ( ; i < length; i++ ) 
+            {
+				if ( resolveValues[ i ] && jQuery.isFunction( resolveValues[ i ].promise ) ) 
+                {
 					resolveValues[ i ].promise()
 						.done( updateFunc( i, resolveContexts, resolveValues ) )
 						.fail( deferred.reject )
