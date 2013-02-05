@@ -1,4 +1,4 @@
-* //
+* /
 * Open up Github, login; open up Cloud 9, login with Github
 * Look through your forked sample projects and look for examples of list and
 * dictionary definitions and methods.
@@ -7,7 +7,7 @@
 * Write some comments identifying the lists, keys, indexes and other list and
 * dictionary pieces we've discussed in class.
 *  Save, add, and commit regularly; before class next week, push to Github.
-*  //
+* /
 
 
 amo-2012/assignments/jquery/src/events.js: 437
@@ -63,6 +63,30 @@ amo-2012/assignments/jquery/speed/benchmarker.js:1-39
     "#page #e2econtent", "#page #e2e"
   ];
 // a dictionary of html tags
+```
+
+
+amo-2012/assignments/jquery/release.js:60
+```javascript
+    if ( process.argv[2] === "-d" ) {
+// a dictionary used in this  IF statement   
+```
+
+
+
+
+
+
+amo-2012/assignments/jquery/release.js:67 -73
+```javascript
+    var newver, oldver,
+		rversion = /^(\d)\.(\d+)\.(\d)((?:a|b|rc)\d|pre)?$/,
+		version = ( process.argv[3] || "" ).toLowerCase().match( rversion ) || {},
+		major = version[1],
+		minor = version[2],
+		patch = version[3],
+		xbeta = version[4];
+// a dictionary within a variable, using keys 1,2,3 &4 and values of major,minor, patch, & xbeta
 ```
 
 
