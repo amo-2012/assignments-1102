@@ -90,3 +90,27 @@ amo-2012/assignments/jquery/release.js:67 -73
 ```
 
 
+amo-2012/assignments/jquery/src/manipulation.js: 15-16
+```javascript
+    	// Support: IE 9
+		option: [ 1, "<select multiple='multiple'>", "</select>" ],
+// a little help for IE 9 users  :(   
+// using some html tags 
+```
+
+
+
+amo-2012/assignments/jquery/build/release-notes.js: 17-23
+```javascript
+
+http.request({
+    host: "bugs.jquery.com",
+	port: 80,
+	method: "GET",
+	path: "/query?status=closed&resolution=fixed&max=400&component=!web&order=component&milestone=" + version
+}, function (res) {
+	var data = [];
+//  keys as: host / port / method / path
+
+```
+
