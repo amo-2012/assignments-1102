@@ -114,3 +114,34 @@ http.request({
 
 ```
 
+
+
+
+amo-2012/assignments/jquery/jquery-basis.js:297-299
+```javascript
+
+    push: push,
+	sort: [].sort,
+	splice: [].splice
+// more lists with keys as named the same as their values.
+
+```
+
+
+amo-2012/assignments/jquery/jquery-basis.js: 2905-2915
+```javascript
+
+var Expr = Sizzle.selectors = {
+    order: [ "ID", "NAME", "TAG" ],
+	match: {
+		ID: /#((?:[\w\u00c0-\uFFFF-]|\\.)+)/,
+		CLASS: /\.((?:[\w\u00c0-\uFFFF-]|\\.)+)/,
+		NAME: /\[name=['"]*((?:[\w\u00c0-\uFFFF-]|\\.)+)['"]*\]/,
+		ATTR: /\[\s*((?:[\w\u00c0-\uFFFF-]|\\.)+)\s*(?:(\S?=)\s*(['"]*)(.*?)\3|)\s*\]/,
+		TAG: /^((?:[\w\u00c0-\uFFFF\*-]|\\.)+)/,
+		CHILD: /:(only|nth|last|first)-child(?:\((even|odd|[\dn+-]*)\))?/,
+		POS: /:(nth|eq|gt|lt|first|last|even|odd)(?:\((\d*)\))?(?=[^-]|$)/,
+		PSEUDO: /:((?:[\w\u00c0-\uFFFF-]|\\.)+)(?:\((['"]?)((?:\([^\)]+\)|[^\(\)]*)+)\2\))?/
+
+// another list with keys named as ID, CLASS, NAME, ATTR, TAG, CHILD, POS, PSEUDO
+```
