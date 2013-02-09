@@ -145,3 +145,15 @@ var Expr = Sizzle.selectors = {
 
 // another list with keys named as ID, CLASS, NAME, ATTR, TAG, CHILD, POS, PSEUDO
 ```
+
+
+amo-2012/assignments/jquery/gruntfile.js:88-91
+
+```javascript
+
+watch: {
+    		files: [ "<%= jshint.grunt.src %>", "<%= jshint.tests.src %>", "src/**/*.js" ],
+			tasks: "dev"
+		},
+//  
+```
