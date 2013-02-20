@@ -60,3 +60,5 @@ amo-2012/assignments/jquery/src/attributes.js: 311-331
 //  if not, then return 'Ret' (ln 44)if Hooks AND Notxml AND string 'set' in Hooks AND "......."
 //  OR:   apply Elem.setAttribute to Name, Value plus empty string and then return the Value
 ```
+
+// Feb 20 no changes - testing  c9
