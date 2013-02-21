@@ -65,5 +65,5 @@ amo/jquery/build/release-notes.js: 29-58
 		}
 
 	});
-//
+//  drawn out:  https://docs.google.com/drawings/d/1LP1Hsh7OhXka_GuDmgVrF4KiB4trtYYwAn5gveKyUTM/edit?usp=sharing
 ```
