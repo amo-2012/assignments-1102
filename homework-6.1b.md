@@ -42,10 +42,10 @@ amo/jquery/build/release-notes.js: 29-58
 			cur;
 
 		while ( (match = extract.exec( file )) ) {
-			if ( "#" + match[1] !== match[2] ) {
+			if ( "#" + match[1] !== match[2] ) {   // amo ~ if # and match1 does not equal match2
 				var cat = match[3];
 
-				if ( !cur || cur !== cat ) {
+				if ( !cur || cur !== cat ) {  // amo ~ if not cur  OR cur is not equal to cat
 					if ( cur ) {
 						console.log("</ul>");
 					}
@@ -60,10 +60,33 @@ amo/jquery/build/release-notes.js: 29-58
 				);
 			}
 		}
-		if ( cur ) {
+		if ( cur ) {   // if cur exists
 			console.log("</ul>");
 		}
 
 	});
-//  drawn out:  https://docs.google.com/drawings/d/1LP1Hsh7OhXka_GuDmgVrF4KiB4trtYYwAn5gveKyUTM/edit?usp=sharing
+// amo ~  drawn out:  https://docs.google.com/drawings/d/1LP1Hsh7OhXka_GuDmgVrF4KiB4trtYYwAn5gveKyUTM/edit?usp=sharing
+```
+
+jquery/src/attributes.js:57-64
+```javascript
+    			if ( cur ) {
+					j = 0;
+					while ( (clazz = classes[j++]) ) {
+						if ( cur.indexOf( " " + clazz + " " ) < 0 ) {
+							cur += clazz + " ";
+						}
+					}
+					elem.className = jQuery.trim( cur );
+                    
+// amo ~ if 'cur' exists, then j is 0.  then loop  WHILE  clazz increments classes by one, then jQuery.trim(cur) is assigned to elem.className
+```
+
+
+jquery/src/attributes.js:156-158
+```javascript
+    	for ( ; i < l; i++ ) {
+			if ( this[i].nodeType === 1 && (" " + this[i].className + " ").replace(rclass, " ").indexOf( className ) >= 0 ) {
+				return true;
+//  amo ~ a 'for' loop.  when 'i' is less than 'l', increment by one;  and IF .... (line 89), then return true
 ```
