@@ -81,3 +81,28 @@ function inspectPrefiltersOrTransports( structure, options, originalOptions, jqX
 // inscope variables: inspected, datatypeOrTransport
 // return value:  selected
 ```
+
+
+```javascript
+jQuery/src/ajax.js:117-131
+
+function ajaxExtend( target, src ) {
+    var key, deep,
+		flatOptions = jQuery.ajaxSettings.flatOptions || {};
+
+	for ( key in src ) {
+		if ( src[ key ] !== undefined ) {
+			( flatOptions[ key ] ? target : ( deep || (deep = {}) ) )[ key ] = src[ key ];
+		}
+	}
+	if ( deep ) {
+		jQuery.extend( true, target, deep );
+	}
+
+	return target;
+}
+// name: ajaxExtend
+// arguments: target, src
+// inscope variables: key, deep
+// return value:  target
+```
