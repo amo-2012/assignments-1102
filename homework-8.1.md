@@ -46,3 +46,15 @@ jQuery.fn = jQuery.prototype = {
 		}
 // The whole hog - prototypal inheritance
 ```
+
+
+
+```javascript
+jQuery/src/ajax.js:191-194
+
+jQuery.each( [ "ajaxStart", "ajaxStop", "ajaxComplete", "ajaxError", "ajaxSuccess", "ajaxSend" ], function( i, type ){
+    jQuery.fn[ type ] = function( fn ){
+		return this.on( type, fn );
+	};
+// constructor
+```
