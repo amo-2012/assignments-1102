@@ -16,7 +16,8 @@ jQuery = function( selector, context ) {
 * return:    (see lines 76-81)
 //
 ```
-//
+
+
 ```javascript
 jQuery.fn = jQuery.prototype = {
     // The current version of jQuery being used
@@ -25,6 +26,8 @@ jQuery.fn = jQuery.prototype = {
 	constructor: jQuery,
 	init: function( selector, context, rootjQuery ) {
     //
+// method: init, jQuery.fn
+// properties:  
 ```
 
 
@@ -45,6 +48,8 @@ jQuery.fn = jQuery.prototype = {
 			return this;
 		}
 // The whole hog - prototypal inheritance
+// properties: prototype
+// method: constructor
 ```
 
 
@@ -57,4 +62,22 @@ jQuery.each( [ "ajaxStart", "ajaxStop", "ajaxComplete", "ajaxError", "ajaxSucces
 		return this.on( type, fn );
 	};
 // constructor
+// properties: each
+// method: funcion(fn)
+```
+
+```javascript
+jQuery/src/manipulation.js:602-610
+function getAll( context, tag ) {
+    var ret = context.getElementsByTagName ? context.getElementsByTagName( tag || "*" ) :
+			context.querySelectorAll ? context.querySelectorAll( tag || "*" ) :
+			[];
+
+	return tag === undefined || tag && jQuery.nodeName( context, tag ) ?
+		jQuery.merge( [ context ], ret ) :
+		ret;
+}
+// the easy way. One instance
+// properties: nodeName
+// method: getAll
 ```
