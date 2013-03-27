@@ -1,4 +1,4 @@
-var assert = require ("assert");
+var assert = require("assert");
 
 /* Homework 10 - more coding dojo.
  *
@@ -6,7 +6,7 @@ var assert = require ("assert");
    
 
  * testing Division:  
- *     C = A *  B 
+ *     C = A /  B 
  *1    1 | 1 |  1 
  *2    x | 1 |  0
  *3  - 1 |-1 |  1
@@ -18,23 +18,28 @@ var assert = require ("assert");
  *9    0 | 0 | -1
  *10   5 |20 | 4
  */
- 
-function div(a,b,c) {
-    c = (a/b);
-    return c;
-     
-   }
-   
- 
-assert(div(1,1)==1,'1 divided by 1 equals one');
-//assert(div(1,0)==NaN, 'can not divide by  zero');
-assert(div(-1,-1)==1, '-1 divided by -1' );
-assert(div(1,-1)==-1, '1 /1');
-//assert(div(-1,0)==Nan,'1');
-assert(div(-1,-1)==1, ' ');
-assert(div(0,-1)==0, ' ');
-assert(div(0,-1)==0, ' ');
-assert(div(-1,0)==Nan, ' ');
 
+var div = function(a,b) {
+       if (typeof a === 0  || typeof b === 0)
+       {
+           throw  {
+               name: 'typeError',
+               message: 'can not divide by zero'
+           };
+
+            return (a/b);
+       }
+};
+
+//assert.equal(1,div(1,1));
+//assert.equal(6,div(12,2));
+assert.equal(null,div(1,0));
+//assert.equal(-1,div(-1,1));
+//assert.equal(-1,div(1,-1));
+assert.equal(null,div(-1,0));
+//assert.equal(-1,div(-1,-1));
+assert.equal(null,div(1,0));
+assert.equal(null,div(0,0));
+assert.equal(null,div(0,-1));
 
 
