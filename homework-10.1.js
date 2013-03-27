@@ -43,3 +43,32 @@ assert.equal(null,div(0,0));
 assert.equal(null,div(0,-1));
 
 
+
+
+//     trying addition
+/*
+ *  1 +  1 =  2
+ *  1 +  0 =  1
+ *  1 + -1 =  0
+ *  0 +  1 =  1
+ *  0 +  0 =  0
+ *  0 + -1 = -1
+ * -1 +  1 =  0
+ * -1 + -1 = -2
+ * -1 +  0 = -1
+*/
+
+var add = function(a,b) {
+    return (a+b);
+}
+
+assert.equal(2,add(1,1));
+assert.equal(1,add(1,0));
+assert.equal(0,add(1,-1));
+assert.equal(1,add(0,1));
+assert.equal(0,add(0,0));
+assert.equal(-1,add(0,-1));
+assert.equal(0,add(-1,1));
+assert.equal(-2,add(-1,-1));
+assert.equal(-1,add(-1,0));
+
