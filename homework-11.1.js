@@ -52,7 +52,7 @@ assert.equal(-2,add(-1,-1));
  *  -1  -1  = 0
  * 
  */
-5
+
 var sub = function(a,b){
     return (a-b);
     }
