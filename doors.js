@@ -42,4 +42,11 @@ for (i=0; i<doors; i+=3){
      hallway[i] = 1;
      console.log(hallway[i]);
      }
-     
+// above submitted 9:50   apr 11
+
+
+for (i=1; i<doors; i+=3){
+     if hallway[i] === 0;
+     hallway[i] = 1;
+     console.log(hallway[i]);
+}
